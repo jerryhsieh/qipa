@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>植物世界</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <div class="container">
+      <%= require('./templates/nav.html') %>
+      <%= require('./templates/slides.html') %>
+      <%= require('./templates/search.html') %>
+      <div class="row m-3">
+        <div class="col-lg-2">
+          <%= require('./templates/sidebar.html') %>
+        </div>
+        <div class="col-lg-10 d-flex flex-row flex-wrap">
+          <%= require('./templates/itemlist.html') %>
+          <%= require('./templates/itemlist.html') %>
+          <%= require('./templates/itemlist.html') %>
+          <%= require('./templates/itemlist.html') %>
+          <%= require('./templates/itemlist.html') %>
+          <%= require('./templates/itemlist.html') %>
+          <%= require('./templates/itemlist.html') %>          
+        </div>
+      </div>
+      <%= require('./templates/pager.html') %>       
+      <%= require('./templates/footer.html') %>      
+    </div>
+  </body>
+</html>
+
+

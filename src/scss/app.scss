@@ -1,0 +1,14 @@
+
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+
+.carousel-item  {
+    max-height: 400px !important;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    position: relative;
+    top: -150px !important;
+}
