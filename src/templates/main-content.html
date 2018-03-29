@@ -1,0 +1,20 @@
+<div>
+  <slides></slides>
+  <search></search>
+  <div class="row m-3">
+    <div class="col-lg-2">
+      <sidebar></sidebar>
+    </div>
+    <div class="col-lg-10 d-flex flex-row flex-wrap justify-content-between">
+      <div class="card my-2" style="width: 18rem;" ng-repeat="plant in plants">
+        <img class="card-img-top" src="{{plant.img}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{plant.name}}</h5>
+          <p class="card-text">{{plant.description}}</p>
+          <button class="btn btn-primay" ng-click="collect($index)">Collect</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <pager></pager>
+</div>

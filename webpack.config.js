@@ -15,6 +15,13 @@ module.exports = {
   },
   module: {
     rules: [
+       {
+         test: /\.js$/,
+         loader: 'babel-loader',
+         query: {
+           presets: ['es2015']
+         }
+       },
       {
         test: /\.html$/,
         include: path.resolve(__dirname, 'src/templates'),
@@ -65,12 +72,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html",
-      chunks: ['common', 'app']
-    }),
-    new HtmlWebPackPlugin({
-      template: "./src/app/detail/detail.html",
-      filename: "./detail.html",
-      chunks: ['common', 'detail']
+      chunks: ['common', 'app', 'detail']
     }),
     new ImageminPlugin({test: /\.(png|jpg|gif)$/})
   ]

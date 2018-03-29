@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="PlantApplication">
   <head>
     <title>植物世界</title>
     <meta charset="utf-8" />
@@ -9,25 +9,9 @@
   </head>
   <body>
     <div class="container">
-      <%= require('./templates/nav.html') %>
-      <%= require('./templates/slides.html') %>
-      <%= require('./templates/search.html') %>
-      <div class="row m-3">
-        <div class="col-lg-2">
-          <%= require('./templates/sidebar.html') %>
-        </div>
-        <div class="col-lg-10 d-flex flex-row flex-wrap justify-content-between">
-          <%= require('./templates/itemlist.html') %>
-          <%= require('./templates/itemlist.html') %>
-          <%= require('./templates/itemlist.html') %>
-          <%= require('./templates/itemlist.html') %>
-          <%= require('./templates/itemlist.html') %>
-          <%= require('./templates/itemlist.html') %>
-          <%= require('./templates/itemlist.html') %>          
-        </div>
-      </div>
-      <%= require('./templates/pager.html') %>       
-      <%= require('./templates/footer.html') %>      
+      <navbar></navbar>
+      <div ng-view></div>
+      <footer></footer>
     </div>
   </body>
 </html>
