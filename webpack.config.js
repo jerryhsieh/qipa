@@ -4,9 +4,13 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const path = require('path');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    common: './src/common.js',
+    app: './src/app/app.js',
+    detail: './src/app/detail/detail.js'
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -60,7 +64,13 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
-      filename: "./index.html"
+      filename: "./index.html",
+      chunks: ['common', 'app']
+    }),
+    new HtmlWebPackPlugin({
+      template: "./src/app/detail/detail.html",
+      filename: "./detail.html",
+      chunks: ['common', 'detail']
     }),
     new ImageminPlugin({test: /\.(png|jpg|gif)$/})
   ]

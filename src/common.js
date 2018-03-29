@@ -1,5 +1,4 @@
-
 import $ from 'jquery';
 import 'bootstrap';
-import './scss/app.scss';
 import 'lodash';
+import './scss/common.scss';
