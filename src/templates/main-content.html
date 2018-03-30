@@ -10,7 +10,7 @@
         <img class="card-img-top" src="{{plant.img}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{plant.name}}</h5>
-          <p class="card-text">{{plant.description}}</p>
+          <p class="card-text">{{plant.description | limitTo: 50}}</p>
           <button class="btn btn-primay" ng-click="collect($index)">Collect</button>
         </div>
       </div>

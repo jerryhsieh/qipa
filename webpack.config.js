@@ -17,10 +17,16 @@ module.exports = {
     rules: [
        {
          test: /\.js$/,
-         loader: 'babel-loader',
-         query: {
-           presets: ['es2015']
-         }
+         exclude: /(node_modules|bower_components)/,
+         use: [
+           { loader: 'babel-loader',
+             options: {
+               presets: ['@babel/preset-env']
+             }
+           },
+           { loader: 'source-map-loader'}
+         ],
+         enforce: "pre"
        },
       {
         test: /\.html$/,

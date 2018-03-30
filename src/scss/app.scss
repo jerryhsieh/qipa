@@ -1,6 +1,4 @@
 
-
-
 .carousel-item  {
     max-height: 400px !important;
     overflow: hidden;
@@ -9,4 +7,8 @@
 .carousel-item img {
     position: relative;
     top: -150px !important;
+}
+
+.card-img-top {
+    max-height: 200px !important;
 }
