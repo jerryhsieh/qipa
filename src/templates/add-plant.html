@@ -7,7 +7,6 @@
           <input type="text" class="form-control" id="name" placeholder="食人花" ng-model="plant.name"/>
         </div>
 
-        
         <div class="form-group">
           <label for="description">Plant Description</label>
           <textarea cols="30" id="description" class="form-control" ng-model="plant.description" placeholder="傳說中的食人花"></textarea>
@@ -17,8 +16,6 @@
           <label for="img">Plant Image</label>
           <input id="img" type="file" files-model ng-model="plant.img" required/>
         </div>
-        
-
         <button type="submit" class="btn btn-primary" ng-click="save()">Save</button>
         
       </form>
