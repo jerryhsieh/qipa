@@ -2,6 +2,8 @@
 import '../scss/app.scss';
 import '../app.config.js';
 import './plantservice.js'
+import './addplant.js'
+import './file-directive.js';
 
 
 import navbar from '../templates/nav.html';

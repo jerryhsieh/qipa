@@ -7,11 +7,11 @@
     </div>
     <div class="col-lg-10 d-flex flex-row flex-wrap justify-content-between">
       <div class="card my-2" style="width: 18rem;" ng-repeat="plant in plants">
-        <img class="card-img-top" src="{{plant.img}}" alt="Card image cap">
+        <img class="card-img-top" src="{{plant.img.thumb.url}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{plant.name}}</h5>
           <p class="card-text">{{plant.description | limitTo: 50}}</p>
-          <button class="btn btn-primay" ng-click="collect($index)">Collect</button>
+          <button class="btn btn-primay" ng-click="collect(plant.id)">Collect</button>
         </div>
       </div>
     </div>

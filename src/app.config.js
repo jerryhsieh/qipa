@@ -13,5 +13,8 @@ app.config(['$routeProvider', function($routeProvider) {
   }).when('/details/:id', {
     template: require("./templates/detail-page.html"),
     controller: 'DetailController'
-  });
+  }).when('/add', {
+    template: require("./templates/add-plant.html"),
+    controller: 'AddPlantController'
+  })
 }]);
